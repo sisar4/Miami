@@ -4,7 +4,8 @@ loadMenus();
   };
 function loadMenus()
 {
-    document.getElementById('mySidenav').innerHTML = '<img id="loadingMenuNoLog" src="images/loadingDinamycContent.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
+    //document.getElementById('mySidenav').innerHTML = '<img id="loadingMenuNoLog" src="images/loadingDinamycContent.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
+    document.getElementById('mySidenav').innerHTML = '<div class="loading-container"><div class="load1"><div class="load2"><div class="load3"></div></div></div></div>';
     fetch("php/index.php?menu=noLogged", { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
         var target = document.getElementById('mySidenav');
         res.forEach((x)=>{
@@ -33,21 +34,21 @@ function showPage(pageID)
     }
     else
     {
-        
+
     }
 }
 function openNav() {
     document.getElementById("mySidenav").style.width = "225px";
     document.getElementById("main").style.marginLeft = "225px";
   }
-  
+
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
   }
 
 // These two functions need no customization.
-function ChangeBackgroundColor(div) { 
+function ChangeBackgroundColor(div) {
     var TableBackgroundMouseoverColor = "#c8c8c8";
     div.style.backgroundColor = TableBackgroundMouseoverColor;
  }
@@ -59,7 +60,7 @@ function RestoreBackgroundColor(div) {
 var counter=false;
 x.classList.toggle("change");
      function myFunction(x) {
-        
+
          if(counter==true){
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
@@ -73,7 +74,7 @@ x.classList.toggle("change");
          }
 
 
-        
+
       }
       function onloadAccedi(){                                                    //Modificato in data 22/03/2019     Fani
     document.getElementById("chiSei").style.display = "block";              //-----
@@ -91,4 +92,4 @@ function onclickStudente(){                                                 //--
     document.getElementById("chiSei").style.display = "none";               //-----
     document.getElementById("logProf").style.display = "none";              //-----
     document.getElementById("logStudente").style.display = "block";         //-----
-} 
+}
