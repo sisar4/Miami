@@ -72,6 +72,10 @@ font-family: segoe UI;
 
     .button:hover {opacity: 1}
 
+    input{
+      outline: none;
+    }
+
     input[type=text], input[type=password], select {
       width: 100%;
       padding: 12px 20px;
@@ -97,6 +101,7 @@ font-family: segoe UI;
       display: inline-block;
       text-decoration: none;
       cursor: pointer;
+
     }
 
     input[type=submit]:hover, input[type=button]:hover {
@@ -110,13 +115,13 @@ font-family: segoe UI;
   height: 10px;
 }
 .accessoIcona{
-  width: 10px;
+  width: 30px;
   text-align: center;
 }
 
 i{
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   font-size: 30px;
   background-color: rgb(38, 168, 11);
   color: white;
@@ -125,7 +130,8 @@ i{
 }
 .commandLinkTitle
 {
-   color: black;
+  margin: 3px;
+  color: black;
   text-align: left;
   padding: 1px;
 }

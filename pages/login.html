@@ -5,22 +5,18 @@
         <table>
             <tr>
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
-                <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p></td>
+                <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore</td>
             </tr>
-            <tr>
-                <td class="commandLinkTD">Accedi come un professore oppure un amministratore</td>
-            </tr>
+
         </table>
     </div>
     <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;" onclick="onclickStudente()">
         <table>
             <tr>
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
-                <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p></td>
+                <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
             </tr>
-            <tr>
-                <td class="commandLinkTD">Accedi come uno studente</td>
-            </tr>
+
         </table>
     </div>
 </div>
@@ -39,7 +35,7 @@
         <input type="text" placeholder="Inserire Username" name="uname" required>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-        <input type="button" value="Indietro" onclick="onloadAccedi()">
+        <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
         <input type="submit" name="submitProf" value="LogIn">
     </form>
 </div>
@@ -58,7 +54,7 @@
         <input type="text" placeholder="Inserire Username" name="uname" required>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-        <input type="button" value="Indietro" onclick="onloadAccedi()">
+        <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
         <input type="submit" name="submitStudente" value="LogIn">
     </form>
 </div>
