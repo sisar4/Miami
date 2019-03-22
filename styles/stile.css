@@ -45,7 +45,7 @@ font-family: segoe UI;
   {
     background-color: rgb(250, 250, 250);
     float: center;
-    margin-left:auto; 
+    margin-left:auto;
     margin-right:auto;
     box-shadow: 0px 1px 6px 0px rgba(32,33,36,0.28);
     border-radius: 20px;
@@ -69,7 +69,7 @@ font-family: segoe UI;
       text-decoration: none;
       cursor: pointer;
     }
-    
+
     .button:hover {opacity: 1}
 
     input[type=text], input[type=password], select {
@@ -81,7 +81,7 @@ font-family: segoe UI;
       border-radius: 4px;
       box-sizing: border-box;
     }
-    
+
     input[type=submit], input[type=button]  {
       border-radius: 10px;
       background-color: #eee;
@@ -98,7 +98,7 @@ font-family: segoe UI;
       text-decoration: none;
       cursor: pointer;
     }
-    
+
     input[type=submit]:hover, input[type=button]:hover {
       background-color: #45a049;
       opacity: 1;
@@ -144,20 +144,20 @@ i{
     overflow: hidden;
     background-color: #333;
     border: 0px solid #333;
-    
-    
+
+
     box-shadow: 0px 1px 6px 0px rgba(32,33,36,0.28);
   }
-  
+
   .NavLi {
     float: left;
     border-right:1px solid rgb(240, 240, 240);
   }
-  
+
   .NavLi:last-child {
     border-right: none;
   }
-  
+
   .NavLi a {
 	margin: 0;
     display: block;
@@ -166,11 +166,11 @@ i{
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
   .NavLi a:hover:not(.active) {
     background-color: rgb(38, 168, 11);
   }
-  
+
   .NavActive {
     background-color: transparent;
   }
@@ -191,7 +191,7 @@ i{
     background-color: rgb(250, 250, 250);
     margin-top: 70px;
   }
-  
+
   .sidenav a {
     padding: 8px;
     padding-left: 32px;
@@ -202,12 +202,12 @@ i{
     display: block;
     transition: 0.3s;
   }
-  
+
   .sidenav a:hover {
     background-color: darkgray;
     color:white;
   }
-  
+
   .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -215,39 +215,40 @@ i{
     font-size: 36px;
     margin-left: 50px;
   }
-  
+
   #main {
     transition: margin-left .5s;
     padding: 16px;
     margin-left: 225px;
   }
-  
+
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
 
   .container {
+    margin: 8px;
+    margin-left: 18px;
     display: inline-block;
     cursor: pointer;
   }
-  
+
   .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 24px;
+    height: 4px;
     background-color: #fff;
     margin: 6px 0;
+    border-radius: 100px;
     transition: 0.4s;
   }
-  
+
   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-7px, 7px);
   }
-  
+
   .change .bar2 {opacity: 0;}
-  
+
   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-7px, -7px);
   }
