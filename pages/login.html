@@ -1,0 +1,64 @@
+<div id="chiSei" class="bg">
+    <h4>Scegli chi sei per continuare</h4>
+    <p>Per effettuare l'accesso &egrave; necessario specificare chi sta utlizzando il dispositivo</p>
+    <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;"  onclick="onclickProf()">
+        <table>
+            <tr>
+                <td rowspan="2" class="commandLinkTD"><img src="images/prof.png" alt="" style="max-width: 32px; max-height: 32px;"></td>
+                <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p></td>
+            </tr>
+            <tr>
+                <td class="commandLinkTD">Accedi come un professore oppure un amministratore</td>
+            </tr>
+        </table>
+    </div>
+    <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;" onclick="onclickStudente()">
+        <table>
+            <tr>
+                <td rowspan="2" class="commandLinkTD"><img src="images/studenti.png" alt="" style="max-width: 32px; max-height: 32px;"></td>
+                <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p></td>
+            </tr>
+            <tr>
+                <td class="commandLinkTD">Accedi come uno studente</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="logProf" class="bg">                                                                                                           <!--Modificato in data 22/03/2019     Fani (da qui)-->
+    <table>
+        <tr>
+            <td rowspan="2" class="commandLinkTD"><img src="images/prof.png" alt="" style="max-width: 32px; max-height: 32px;"></td>
+            <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p></td>
+        </tr>
+        <tr>
+            <td class="commandLinkTD">Accedi come un professore oppure un amministratore</td>
+        </tr>
+    </table>
+    <form>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Inserire Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="button" value="Indietro" onclick="onloadAccedi()">
+        <input type="submit" name="submitProf" value="LogIn">
+    </form>
+</div>
+<div id="logStudente" class="bg" style='display:"none";'>
+    <table>
+        <tr>
+            <td rowspan="2" class="commandLinkTD"><img src="images/studenti.png" alt="" style="max-width: 32px; max-height: 32px;"></td>
+            <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p></td>
+        </tr>
+        <tr>
+            <td class="commandLinkTD">Accedi come uno studente</td>
+        </tr>
+    </table>
+    <form>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Inserire Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="button" value="Indietro" onclick="onloadAccedi()">
+        <input type="submit" name="submitStudente" value="LogIn">
+    </form>
+</div>  

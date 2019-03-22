@@ -1,0 +1,53 @@
+window.onload = function() {
+loadMenus();
+  };
+function loadMenus()
+{
+    document.getElementById('mySidenav').innerHTML = '<img id="loadingMenuNoLog" src="images/loadingDinamycContent.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
+    fetch("php/index.php?menu=noLogged", { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
+        var target = document.getElementById('mySidenav');
+        res.forEach((x)=>{
+            var node = document.createElement('a');
+            node.setAttribute('href', 'javascript:showPage('+x.pageID+')');
+            var text = document.createTextNode(x.displayName);
+            node.appendChild(text);
+            target.appendChild(node);
+        });
+        document.getElementById("loadingMenuNoLog").remove();
+    });
+}
+
+function showPage(pageID)
+{
+    if(pageID<=10) /*no login required*/
+    {
+        document.getElementById('main').innerHTML = '<img id="loadingPage" src="images/loadingPage.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
+        fetch("php/index.php?page="+pageID, { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
+            document.getElementById('main').innerHTML = res;
+            //document.getElementById("loadingPage").remove();
+        });
+    }
+    else
+    {
+        
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "225px";
+    document.getElementById("main").style.marginLeft = "225px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+
+// These two functions need no customization.
+function ChangeBackgroundColor(div) { 
+    var TableBackgroundMouseoverColor = "#c8c8c8";
+    div.style.backgroundColor = TableBackgroundMouseoverColor;
+ }
+function RestoreBackgroundColor(div) {
+    var TableBackgroundNormalColor = "transparent";
+     div.style.backgroundColor = TableBackgroundNormalColor;
+     }
