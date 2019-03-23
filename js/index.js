@@ -35,21 +35,21 @@ function showPage(pageID)
     }
     else
     {
-        
+
     }
 }
 function openNav() {
     document.getElementById("mySidenav").style.width = "225px";
     document.getElementById("main").style.marginLeft = "225px";
   }
-  
+
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
   }
 
 // These two functions need no customization.
-function ChangeBackgroundColor(div) { 
+function ChangeBackgroundColor(div) {
     var TableBackgroundMouseoverColor = "#c8c8c8";
     div.style.backgroundColor = TableBackgroundMouseoverColor;
  }
@@ -61,7 +61,7 @@ function RestoreBackgroundColor(div) {
 var counter=false;
 x.classList.toggle("change");
      function myFunction(x) {
-        
+
          if(counter==true){
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
@@ -84,8 +84,9 @@ x.classList.toggle("change");
          }
 
 
-        
+
       }
+
       function onloadAccedi(){
     document.getElementById("chiSei").style.display = "block";      
     document.getElementById("logProf").style.display = "none";

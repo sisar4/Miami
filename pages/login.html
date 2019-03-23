@@ -7,6 +7,7 @@
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
                 <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore</td>
             </tr>
+
         </table>
     </div>
     <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;" onclick="onclickStudente()">
@@ -15,6 +16,7 @@
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
                 <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
             </tr>
+
         </table>
     </div>
 </div>
@@ -37,11 +39,8 @@
 <div id="logStudente" class="bg" style='display:"none";'>
     <table>
         <tr>
-            <td rowspan="2" class="commandLinkTD"><img src="images/studenti.png" alt="" style="max-width: 32px; max-height: 32px;"></td>
-            <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p></td>
-        </tr>
-        <tr>
-            <td class="commandLinkTD">Accedi come uno studente</td>
+            <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
+            <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
         </tr>
     </table>
     <form onsubmit="loginSubmit(this)" name="loginStud">
@@ -52,4 +51,4 @@
         <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
         <input type="submit" name="submitStudente" value="LogIn">
     </form>
-</div>  
+</div>
