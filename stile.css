@@ -53,17 +53,7 @@ font-family: segoe UI;
     /*border: 1px solid cornflowerblue;*/
   }
 
-  .selectLogin{
-    margin: 8px;
-    padding: 18px;
-    border-radius: 16px;
-  }
-
-  .selectLogin:hover{
-    background-color: rgb(222, 222, 222);
-  }
-
-  /*.button {
+  .button {
     border-radius: 10px;
       background-color: #eee;
       border: 1px;
@@ -80,67 +70,43 @@ font-family: segoe UI;
       cursor: pointer;
     }
 
-    .button:hover {opacity: 1}*/
-
-
-    form b{
-      color: black;
-      font-size: 24px;
-    }
+    .button:hover {opacity: 1}
 
     input{
       outline: none;
-      font-size: 20px;
     }
 
     input[type=text], input[type=password], select {
-      color: black;
-      width: 600px;
+      width: 100%;
       padding: 12px 20px;
-      margin: 12px;
+      margin: 8px 0;
       display: inline-block;
-      border: none;
-      background-color: transparent;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       box-sizing: border-box;
-      border-bottom: 3px rgb(222, 222, 222) solid;
-      transition: 0.25s;
-    }
-
-    input[type=text]:focus, input[type=password]:focus{
-      padding: 12px 35px;
-      border-bottom: 3px rgb(123, 209, 47) solid;
     }
 
     input[type=submit], input[type=button]  {
-      border: transparent;
-      border-radius: 100px;
-      color: white;
-      padding: 12px 22px;
+      border-radius: 10px;
+      background-color: #eee;
+      border: 1px;
+      border-color: black;
+      color: black;
+      padding: 16px 32px;
       text-align: center;
       font-size: 16px;
-      margin: 4px;
-      margin-top: 40px;
+      margin: 4px 2px;
+      opacity: 0.6;
       transition: 0.3s;
       display: inline-block;
       text-decoration: none;
       cursor: pointer;
+
     }
 
-    form input[type=button]{
-      background-color: rgb(247, 159, 31);
-    }
-    form input[type=button]:hover {
-      background-color: rgb(252, 207, 139);
-      color: black;
-    }
-
-    form input[type=submit]{
-      background-color: #rgb(123, 209, 47);
-    }
-
-    form input[type=submit]:hover{
-      background-color: #rgb(184, 235, 140);
-      color: black;
+    input[type=submit]:hover, input[type=button]:hover {
+      background-color: #45a049;
+      opacity: 1;
     }
 /*login*/
 .commandLinkTD
@@ -157,7 +123,7 @@ i{
   width: 30px;
   height: 30px;
   font-size: 30px;
-  background-color: rgb(123, 209, 47);
+  background-color: rgb(38, 168, 11);
   color: white;
   padding: 20px;
   border-radius: 100px;
@@ -174,14 +140,6 @@ i{
   margin: 3px;
   font-size: 20px;
   text-align: left;
-}
-
-.divider{
-  padding: 0px;
-  width: 0px;
-  height: 300px;
-  margin: 40px;
-  border: rgb(222, 222, 222) solid 2px;
 }
   /*navbar*/
 
@@ -240,24 +198,21 @@ i{
   }
 
   .sidenav a {
-    margin-left: 16px;
-    margin-right: 16px;
     padding: 8px;
+    padding-left: 32px;
+    padding-right: 12px;
     text-decoration: none;
-    text-align:center;
     font-size: 25px;
     color: black;
     display: block;
-    transition: 0.3s;
-    border-bottom: 2px rgb(222, 222, 222) solid;
+    transition: 0.2s;
   }
 
   .sidenav a:hover {
-    margin-left: 0;
-    margin-right: 0;
-    background-color: rgb(123, 209, 47);
-    color: white;
+    background-color: darkgray;
+    color:white;
   }
+
   .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -279,18 +234,10 @@ i{
 
   /* Sidenav Button */
   .container {
+    margin: 8px;
+    margin-left: 18px;
     display: inline-block;
     cursor: pointer;
-    padding: 8px;
-    padding-left: 14px;
-    padding-right: 14px;
-    border-radius: 6px;
-    margin: 0;
-    transition: 0.2s;
-  }
-
-  .container:hover{
-    background-color: rgb(123, 209, 47);
   }
 
   .bar1, .bar2, .bar3 {

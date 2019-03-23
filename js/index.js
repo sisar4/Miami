@@ -6,7 +6,7 @@ showPage(1); /*carica pagina iniziale*/
 function loadMenus()
 {
     //document.getElementById('mySidenav').innerHTML = '<img id="loadingMenuNoLog" src="images/loadingDinamycContent.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
-    //document.getElementById('mySidenav').innerHTML = '<div class="loading-container" id="loadingMenuNoLog"><div class="load1" id="loadingMenuNoLog1"><div class="load2" id="loadingMenuNoLog2"><div class="load3" id="loadingMenuNoLog3"></div></div></div></div>';
+    document.getElementById('mySidenav').innerHTML = '<div class="loading-container" id="loadingMenuNoLog"><div class="load1" id="loadingMenuNoLog1"><div class="load2" id="loadingMenuNoLog2"><div class="load3" id="loadingMenuNoLog3"></div></div></div></div>';
     fetch("php/index.php?menu=noLogged", { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
         var target = document.getElementById('mySidenav');
         res.forEach((x)=>{
@@ -16,7 +16,10 @@ function loadMenus()
             node.appendChild(text);
             target.appendChild(node);
         });
-        document.getElementsById("loadingMenuNoLog").remove();
+        document.getElementById("loadingMenuNoLog").remove();
+        document.getElementById("loadingMenuNoLog1").remove();
+        document.getElementById("loadingMenuNoLog2").remove();
+        document.getElementById("loadingMenuNoLog3").remove();
     });
 }
 
@@ -89,22 +92,22 @@ var counter=false;
       }
 
       function onloadAccedi(){
-    document.getElementById("chiSei").style.display = "block";      
+    document.getElementById("chiSei").style.display = "block";
     document.getElementById("logProf").style.display = "none";
     document.getElementById("logStudente").style.display = "none";
-}                                                                          
+}
 
-function onclickProf(){                                                   
-    document.getElementById("chiSei").style.display = "none";        
-    document.getElementById("logProf").style.display = "block";      
-    document.getElementById("logStudente").style.display = "none";         
-}                                                                           
+function onclickProf(){
+    document.getElementById("chiSei").style.display = "none";
+    document.getElementById("logProf").style.display = "block";
+    document.getElementById("logStudente").style.display = "none";
+}
 
-function onclickStudente(){                                             
-    document.getElementById("chiSei").style.display = "none";           
-    document.getElementById("logProf").style.display = "none";         
-    document.getElementById("logStudente").style.display = "block";   
-} 
+function onclickStudente(){
+    document.getElementById("chiSei").style.display = "none";
+    document.getElementById("logProf").style.display = "none";
+    document.getElementById("logStudente").style.display = "block";
+}
 
 function loginSubmit(form)
 {
@@ -143,7 +146,7 @@ function encodeQueryData(data) {
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
-  
+
   function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

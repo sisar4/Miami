@@ -1,16 +1,15 @@
 <div id="chiSei" class="bg">
     <h4>Scegli chi sei per continuare</h4>
     <p>Per effettuare l'accesso &egrave; necessario specificare chi sta utlizzando il dispositivo</p>
-    <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;"  onclick="onclickProf()">
+    <div class="selectLogin" onclick="onclickProf()">
         <table>
             <tr>
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
                 <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore</td>
             </tr>
-
         </table>
     </div>
-    <div onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)" style="cursor: pointer;" onclick="onclickStudente()">
+    <div class="selectLogin" onclick="onclickStudente()">
         <table>
             <tr>
                 <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
@@ -20,35 +19,49 @@
         </table>
     </div>
 </div>
-<div id="logProf" class="bg">                                                                                                          
+<div id="logProf" class="bg">
     <table>
-        <tr>
-            <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
-            <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore </td>
-        </tr>
+      <td>
+        <form onsubmit="loginSubmit(this)" name="loginProf">
+            <b>Username</b><br>
+            <input type="text" placeholder="Inserire Username" name="uname" required><br>
+            <b>Password</b><br>
+            <input type="password" placeholder="Inserire Password" name="psw" required><br>
+            <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
+            <input type="submit" name="submitProf" value="LogIn">
+        </form>
+      </td>
+      <td class="divider"></td>
+      <td>
+        <table>
+            <tr>
+                <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
+                <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore </td>
+            </tr>
+        </table>
+      </td>
     </table>
-    <form onsubmit="loginSubmit(this)" name="loginProf">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Inserire Username" name="uname" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Inserire Password" name="psw" required>
-        <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
-        <input type="submit" name="submitProf" value="LogIn">
-    </form>
 </div>
 <div id="logStudente" class="bg" style='display:"none";'>
-    <table>
-        <tr>
-            <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
-            <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
-        </tr>
-    </table>
-    <form onsubmit="loginSubmit(this)" name="loginStud">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Inserire Username" name="uname" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Inserire Password" name="psw" required>
-        <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
-        <input type="submit" name="submitStudente" value="LogIn">
-    </form>
+  <table>
+    <td>
+      <form onsubmit="loginSubmit(this)" name="loginStud">
+          <b>Username</b><br>
+          <input type="text" placeholder="Inserire Username" name="uname" required><br>
+          <b>Password</b><br>
+          <input type="password" placeholder="Inserire Password" name="psw" required><br>
+          <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
+          <input type="submit" name="submitStudente" value="LogIn">
+      </form>
+    </td>
+    <td class="divider"></td>
+    <td>
+      <table>
+          <tr>
+              <td rowspan="2" class="commandLinkTD"><i class="fas fa-user-graduate accessoIcona"></i></td>
+              <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
+          </tr>
+      </table>
+    </td>
+  </table>
 </div>
