@@ -22,6 +22,8 @@ function loadMenus()
 
 function showPage(pageID)
 {
+    if(document.getElementById("mySidenav").style.width=="100%")
+        showHideNav(document.getElementById("mySidenav"));
     if(pageID<=10) /*no login required*/
     {
         document.getElementById('main').innerHTML = '<img id="loadingPage" src="images/loadingPage.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
@@ -59,8 +61,7 @@ function RestoreBackgroundColor(div) {
      }
 
 var counter=false;
-x.classList.toggle("change");
-     function myFunction(x) {
+     function showHideNav(x) {
 
          if(counter==true){
             document.getElementById("mySidenav").style.width = "0";
@@ -69,7 +70,7 @@ x.classList.toggle("change");
             x.classList.toggle("change");
          }else {
             var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if(w<600)
+            if(w<650)
             {
                 document.getElementById("mySidenav").style.width = "100%";
             }
