@@ -24,10 +24,7 @@ body {
   }
 
   h4 {
-    width: 635px;
-    padding: 6px;
-    border-radius: 6px;
-    color: rgb(123, 209, 47);
+
     text-align: left;
     font-family: segoe UI Light;
     font-size: 28;
@@ -198,12 +195,22 @@ table i{
   padding: 14px;
   border-radius: 100px;
 }
+<<<<<<< HEAD
 
 .divider{
   width: 0px;
   height: 300px;
   margin: 20px;
   border: rgb(222, 222, 222) solid 2px;
+=======
+.commandLinkTitle
+{
+  margin: 3px;
+  color: rgb(58, 51, 171);
+  text-align: left;
+  padding: 1px;
+  font-weight: bold;
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
 }
 
 .titoloAccesso{
@@ -281,8 +288,12 @@ form b{
     font-size: 25px;
     color: black;
     display: block;
+<<<<<<< HEAD
     transition: 0.3s;
     border-bottom: 2px rgb(222, 222, 222) solid;
+=======
+    transition: 0.2s;
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
   }
 
   .sidenav a:hover {
@@ -301,7 +312,7 @@ form b{
   }
 
   #main {
-    transition: margin-left .5s;
+    transition: margin-left .2s;
     padding: 16px;
     margin-left: 225px;
   }
@@ -333,7 +344,7 @@ form b{
     background-color: #fff;
     margin: 6px 0;
     border-radius: 100px;
-    transition: 0.4s;
+    transition: 0.2s;
   }
 
   .change .bar1 {
@@ -343,7 +354,7 @@ form b{
   .change .bar2 {opacity: 0;}
 
   .change .bar3 {
-    transform: rotate(45deg) translate(-7px, -7px);
+	transform: rotate(45deg) translate(-7px, -7px);
   }
 
   /* Sidenav not laoding */

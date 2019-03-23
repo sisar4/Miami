@@ -1,6 +1,7 @@
 window.onload = function() {
 closeNav();
 loadMenus();
+showPage(1); /*carica pagina iniziale*/
   };
 function loadMenus()
 {
@@ -15,15 +16,21 @@ function loadMenus()
             node.appendChild(text);
             target.appendChild(node);
         });
+<<<<<<< HEAD
         document.getElementById("loadingMenuNoLog").remove();
         document.getElementById("loadingMenuNoLog1").remove();
         document.getElementById("loadingMenuNoLog2").remove();
         document.getElementById("loadingMenuNoLog3").remove();
+=======
+        document.getElementsById("loadingMenuNoLog").remove();
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
     });
 }
 
 function showPage(pageID)
 {
+    if(document.getElementById("mySidenav").style.width=="100%")
+        showHideNav(document.getElementById("mySidenav"));
     if(pageID<=10) /*no login required*/
     {
         document.getElementById('main').innerHTML = '<img id="loadingPage" src="images/loadingPage.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
@@ -61,8 +68,7 @@ function RestoreBackgroundColor(div) {
      }
 
 var counter=false;
-x.classList.toggle("change");
-     function myFunction(x) {
+     function showHideNav(x) {
 
          if(counter==true){
             document.getElementById("mySidenav").style.width = "0";
@@ -70,8 +76,17 @@ x.classList.toggle("change");
             counter=false;
             x.classList.toggle("change");
          }else {
-            document.getElementById("mySidenav").style.width = "225px";
-            document.getElementById("main").style.marginLeft = "225px";
+            var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if(w<650)
+            {
+                document.getElementById("mySidenav").style.width = "100%";
+            }
+            else
+            {
+                document.getElementById("mySidenav").style.width = "225px";
+                document.getElementById("main").style.marginLeft = "225px";
+            }
+
             counter=true;
             x.classList.toggle("change");
          }
@@ -79,6 +94,7 @@ x.classList.toggle("change");
 
 
       }
+<<<<<<< HEAD
 function onloadAccedi(){                                                    //Modificato in data 22/03/2019     Fani
     document.getElementById("chiSei").style.display = "block";              //-----
     document.getElementById("logProf").style.display = "none";              //-----
@@ -95,4 +111,77 @@ function onclickStudente(){                                                 //--
     document.getElementById("chiSei").style.display = "none";               //-----
     document.getElementById("logProf").style.display = "none";              //-----
     document.getElementById("logStudente").style.display = "block";         //-----
+=======
+
+      function onloadAccedi(){
+    document.getElementById("chiSei").style.display = "block";      
+    document.getElementById("logProf").style.display = "none";
+    document.getElementById("logStudente").style.display = "none";
+}                                                                          
+
+function onclickProf(){                                                   
+    document.getElementById("chiSei").style.display = "none";        
+    document.getElementById("logProf").style.display = "block";      
+    document.getElementById("logStudente").style.display = "none";         
+}                                                                           
+
+function onclickStudente(){                                             
+    document.getElementById("chiSei").style.display = "none";           
+    document.getElementById("logProf").style.display = "none";         
+    document.getElementById("logStudente").style.display = "block";   
+} 
+
+function loginSubmit(form)
+{
+    if(form.name=="loginStud")
+    {
+        const data = { 'action': 'login', 'userType': 'stud', 'uName': form["uname"].value, 'uPwd': form["psw"].value };
+        const querystring = encodeQueryData(data);
+        fetch("php/login.php?"+querystring, { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
+        if(res!=null && res!="error")
+            setCookie("token", res, 2);
+            //todo errore se fallisce
+        });
+    }
+    else if(form.name=="loginProf")
+    {
+        const data = { 'action': 'login', 'userType': 'prof', 'uName': form["uname"].value, 'uPwd': form["psw"].value };
+        const querystring = encodeQueryData(data);
+        fetch("php/login.php?"+querystring, { credentials: "same-origin"}).then((r)=> {return r.json();}).then((res)=> {
+        if(res!=null && res!="error")
+            setCookie("token", res, 2);
+            //todo errore se fallisce
+        });
+    }
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
 }
+
+function encodeQueryData(data) {
+    const ret = [];
+    for (let d in data)
+      ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+    return ret.join('&');
+ }
+
+ function setCookie(cname,cvalue,exhours) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exhours*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }

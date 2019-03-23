@@ -109,7 +109,7 @@ function my_simple_crypt( $string, $action = 'e' ) {
 
    return $output;
 }
-$nome = "mario";
+/*$nome = "mario";
 $cognome = "rossi";
 $id = "12";
 $ruolo = "0";
@@ -125,5 +125,5 @@ echo "getUserSurname(): ". getUserSurname($token)."</br>";
 echo "getUserID(): ". getUserID($token)."</br>";
 echo "getUserRole():". getUserRole($token)."</br>";
 echo "getTokenMinDate():". date("d-m-y h:m:s",getTokenMinDate($token))."</br>";
-echo "getTokenMaxDate():". date("d-m-y h:m:s",getTokenMaxDate($token))."</br>";
+echo "getTokenMaxDate():". date("d-m-y h:m:s",getTokenMaxDate($token))."</br>";*/
 ?>

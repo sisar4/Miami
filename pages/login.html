@@ -47,6 +47,7 @@
 
   </table>
 </div>
+<<<<<<< HEAD
 <div id="logStudente" class="bg" style='display:"none";'>
 <table>
   <td>
@@ -55,6 +56,20 @@
         <input type="text" placeholder="Username" name="uname" required><br>
         <b>Password</b><br>
         <input type="password" placeholder="Password" name="psw" required><br>
+=======
+<div id="logProf" class="bg">                                                                                                          
+    <table>
+        <tr>
+            <td rowspan="2" class="commandLinkTD"><i class="fas fa-chalkboard-teacher accessoIcona"></i></td>
+            <td class="commandLinkTD"><p class="commandLinkTitle">Professore</p> Accedi come un professore oppure un amministratore </td>
+        </tr>
+    </table>
+    <form onsubmit="loginSubmit(this)" name="loginProf">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Inserire Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Inserire Password" name="psw" required>
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
         <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
         <input type="submit" name="submitStudente" value="Log In">
     </form>
@@ -67,5 +82,16 @@
             <td class="commandLinkTD"><p class="commandLinkTitle">Studente</p> Accedi come uno studente</td>
         </tr>
     </table>
+<<<<<<< HEAD
   </td>
+=======
+    <form onsubmit="loginSubmit(this)" name="loginStud">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Inserire Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Inserire Password" name="psw" required>
+        <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
+        <input type="submit" name="submitStudente" value="LogIn">
+    </form>
+>>>>>>> 0c9150c9f64878ef14750b383c56ed55ed06bbc2
 </div>
