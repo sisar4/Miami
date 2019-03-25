@@ -172,11 +172,11 @@ body {
     }
 
     form input[type=submit]{
-      background-color: #rgb(123, 209, 47);
+      background-color: rgb(123, 209, 47);
     }
 
     form input[type=submit]:hover{
-      background-color: #rgb(184, 235, 140);
+      background-color: rgb(184, 235, 140);
       color: black;
     }
 
@@ -212,7 +212,6 @@ table i{
   padding: 14px;
   border-radius: 100px;
 }
-<<<<<<< HEAD
 
 .divider{
   width: 0px;
