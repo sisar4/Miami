@@ -10,18 +10,25 @@ font-family: segoe UI;
     text-shadow: 0 0 0px #000000;
     font-family: segoe UI;
   }
-  .pCaption {
-    color: rgb(0, 32, 211);
-    text-align: left;
-    font-family: segoe UI;
-    padding-left: 6px;
+
+  h3{
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
+
   h4 {
     color: rgb(58, 51, 171);
     text-align: left;
     font-family: segoe UI Light;
     padding-left: 6px;
   }
+  .pCaption {
+    color: rgb(0, 32, 211);
+    text-align: left;
+    font-family: segoe UI;
+    padding-left: 6px;
+  }
+
   p {
     font-family: segoe UI;
   }
@@ -128,6 +135,7 @@ form i{
   padding: 20px;
   border-radius: 100px;
 }
+
 .commandLinkTitle
 {
   margin: 3px;
