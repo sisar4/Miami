@@ -1,7 +1,8 @@
 function showSidenavLoading()
 {
     //document.getElementById('mySidenav').innerHTML = '<img id="loadingMenuNoLog" src="images/loadingDinamycContent.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
-    document.getElementById('mySidenav').innerHTML = '<div class="loading-container" id="loadingMenuNoLog"><div class="load1" id="loadingMenuNoLog1"><div class="load2" id="loadingMenuNoLog2"><div class="load3" id="loadingMenuNoLog3"></div></div></div></div>';
+    //document.getElementById('mySidenav').innerHTML = '<div class="loading-container" id="loadingMenuNoLog"><div class="load1" id="loadingMenuNoLog1"><div class="load2" id="loadingMenuNoLog2"><div class="load3" id="loadingMenuNoLog3"></div></div></div></div>';
+    document.getElementById('mySidenav').innerHTML = '<div class="loading-container" id="loadingMenuNoLog"><img src="images/Ingranaggio.png" class="load1"><img src="images/ResistenzaDiodoShuntCondensatore.png" class="load2"><img src="images/CalibroCompasso.png" class="load3"></div>';
 }
 function hideSidenavLoading()
 {
@@ -12,7 +13,7 @@ function hideSidenavLoading()
 }
 function showMainLoading()
 {
-    document.getElementById('main').innerHTML = '<img id="loadingPage" src="images/loadingPage.gif" alt="Attendere..." style="  display: block; margin-left: auto; margin-right: auto;">';
+    document.getElementById('main').innerHTML = '<div class="loading-container" id="loadingPage"><h3 class="loading-text">Loading...</h3><img src="images/Ingranaggio.png" class="load1"><img src="images/ResistenzaDiodoShuntCondensatore.png" class="load2"><img src="images/CalibroCompasso.png" class="load3"></div>';
 }
 function hideMainLoading()
 {
