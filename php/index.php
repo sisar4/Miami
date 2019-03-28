@@ -10,6 +10,9 @@ if(isset($_GET['page']))
         case 2:
             $file = __DIR__ ."/../pages/login.html";
         break;
+        case 3:
+        $file = __DIR__ ."/../pages/docente.html";
+        break;
     }
     
     $result = file_get_contents($file);

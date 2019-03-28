@@ -5,5 +5,9 @@
 {
     "displayName": "Accedi",
     "pageID": 2
+},
+{
+    "displayName": "Visualizza docenti",
+    "pageID": 3
 }
 ]

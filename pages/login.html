@@ -24,13 +24,13 @@
 <div id="logProf" class="bg">
   <table>
     <td>
-      <form>
+      <form onsubmit="return loginSubmit(this)" name="loginProf" id="loginProf">
           <b>Username</b><br>
           <input type="text" placeholder="Username" name="uname" required><br>
           <b>Password</b><br>
           <input type="password" placeholder="Password" name="psw" required><br>
           <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
-          <input type="submit" name="submitProf" value="Log In">
+          <input type="button" name="submitProf" value="Log In" onclick="loginSubmit('prof')">
       </form>
     </td>
     <td><div class="divider"></div></td>
@@ -48,13 +48,13 @@
 <div id="logStudente" class="bg" style='display:"none";'>
   <table>
     <td>
-      <form onsubmit="loginSubmit(this)" name="loginStud">
+      <form onsubmit="return loginSubmit(this)" name="loginStud" id="loginStud">
           <b>Username</b><br>
           <input type="text" placeholder="Inserire Username" name="uname" required><br>
           <b>Password</b><br>
           <input type="password" placeholder="Inserire Password" name="psw" required><br>
           <input type="button" value="Indietro" onclick="onloadAccedi()" class="button">
-          <input type="submit" name="submitStudente" value="Log In">
+          <input type="button" name="submitStudente" value="Log In" onclick="loginSubmit('stud')">
       </form>
     </td>
     <td class="divider"></td>
